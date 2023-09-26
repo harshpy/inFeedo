@@ -3,7 +3,8 @@
 
 ###### POSTMAN COLLECTION IS INCLUDED IN THE REPO. ######
 
-
+#########pagination can be achieved by $limit and $offset##########
+ex:- localhost:3000/tasks?$limit=2&$offset=3
 
 after creating, you'll need to login using email and password and a JWT token will be generated.
 that JWT token must be used with every user's and task's endpoint in headers under "Authorization".
@@ -25,8 +26,6 @@ all other necessary packages like express.js and required ORM will be installed 
 6. "npm run db:migrate" // this will the migration files and create tables. to rollback, please run (npm run db:rollback)
 7. npm start
 
-#########pagination can be achieved by $limit and $offset##########
-ex:- localhost:3000/tasks?$limit=2&$offset=3
 
 ### language used, framework used
 node.js, postgresql, express.js
