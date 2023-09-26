@@ -18,7 +18,7 @@ exports.up = async function (knex) {
             table.integer('userId').unsigned()
                 .notNullable()
                 .references('users.id')
-                .onDelete('RESTRICT');
+                .onDelete('CASCADE');
 
             table.timestamp('createdAt').defaultTo(knex.fn.now());
             table.timestamp('updatedAt').defaultTo(knex.fn.now());
