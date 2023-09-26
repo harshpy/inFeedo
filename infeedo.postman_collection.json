@@ -1,0 +1,336 @@
+{
+	"info": {
+		"_postman_id": "09c02b70-5c71-4d38-8c0e-1effa0d8692d",
+		"name": "infeedo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17500513"
+	},
+	"item": [
+		{
+			"name": "users",
+			"item": [
+				{
+					"name": "create users",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Harsh\",\n    \"email\": \"harsh@gmail.com\",\n    \"password\": \"123456789\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/users/register",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "user login",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"harsh@gmail.com\",\n    \"password\": \"123456789\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/users/login",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get user",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySW5mbyI6eyJlbWFpbCI6ImhhcnNhaEBnbWFpbC5jb20iLCJpZCI6MywicGFzc3dvcmQiOiIkMmIkMTAkMmVhclVoMjRqWHJoQ1hpaUpHVEpjdXhDdFFMREJZbnI2YnZSbWNaY3FTSmtoNnRhSDZqNEMiLCJuYW1lIjoiSGFyc2giLCJjcmVhdGVkQXQiOiIyMDIzLTA5LTI2VDExOjM4OjEyLjkwMFoiLCJ1cGRhdGVkQXQiOiIyMDIzLTA5LTI2VDExOjM4OjEyLjkwMFoifSwiaWF0IjoxNjk1NzI4MzAyLCJleHAiOjE2OTU3NTcxMDJ9.Edsb7bBuMdWlkCvwVXfFui9OK8OqokKBTIGiGBXhPrQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/users/1",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update user",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySW5mbyI6eyJlbWFpbCI6ImhhcnNoQGdtYWlsLmNvbSIsImlkIjoxLCJwYXNzd29yZCI6IiQyYiQxMCROMFdFczJtTmFoY1Q3UVVEUUZndDBlR2FYZGd6eHlLZ3JBVzZpRnBlRS9ZMDY2Q1ZHeld2VyIsIm5hbWUiOiJIYXJzaCIsImNyZWF0ZWRBdCI6IjIwMjMtMDktMjZUMTI6MDI6MDUuNzc2WiIsInVwZGF0ZWRBdCI6IjIwMjMtMDktMjZUMTI6MDI6MDUuNzc2WiJ9LCJpYXQiOjE2OTU3Mjk3MzEsImV4cCI6MTY5NTc1ODUzMX0.HpZDqHG3TbEKaaTFmXOrtJkyBUXSjdLAtNMLTOL_p3o",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Harsh\",\n    \"email\": \"harsh@gmail.com\",\n    \"password\": \"123456789\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/users/1",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete user",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySW5mbyI6eyJlbWFpbCI6ImhhcnNhaEBnbWFpbC5jb20iLCJpZCI6MywicGFzc3dvcmQiOiIkMmIkMTAkMmVhclVoMjRqWHJoQ1hpaUpHVEpjdXhDdFFMREJZbnI2YnZSbWNaY3FTSmtoNnRhSDZqNEMiLCJuYW1lIjoiSGFyc2giLCJjcmVhdGVkQXQiOiIyMDIzLTA5LTI2VDExOjM4OjEyLjkwMFoiLCJ1cGRhdGVkQXQiOiIyMDIzLTA5LTI2VDExOjM4OjEyLjkwMFoifSwiaWF0IjoxNjk1NzI4NDExLCJleHAiOjE2OTU3NTcyMTF9.p9-ura0jpQv8QIXbyl1ShIL6tbwxo4oliMSN7tbGd5U",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/users/1",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "tasks",
+			"item": [
+				{
+					"name": "update task",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySW5mbyI6eyJlbWFpbCI6ImhhcnNoQGdtYWlsLmNvbSIsImlkIjoxLCJwYXNzd29yZCI6IiQyYiQxMCROMFdFczJtTmFoY1Q3UVVEUUZndDBlR2FYZGd6eHlLZ3JBVzZpRnBlRS9ZMDY2Q1ZHeld2VyIsIm5hbWUiOiJIYXJzaCIsImNyZWF0ZWRBdCI6IjIwMjMtMDktMjZUMTI6MDI6MDUuNzc2WiIsInVwZGF0ZWRBdCI6IjIwMjMtMDktMjZUMTI6MDI6MDUuNzc2WiJ9LCJpYXQiOjE2OTU3Mjk3MzEsImV4cCI6MTY5NTc1ODUzMX0.HpZDqHG3TbEKaaTFmXOrtJkyBUXSjdLAtNMLTOL_p3o",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 1,\n    \"name\": \"GET MILK!!\",\n    \"status\": \"inProgress\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/tasks/1",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"tasks",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all tasks",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySW5mbyI6eyJlbWFpbCI6ImhhcnNoQGdtYWlsLmNvbSIsImlkIjoxLCJwYXNzd29yZCI6IiQyYiQxMCROMFdFczJtTmFoY1Q3UVVEUUZndDBlR2FYZGd6eHlLZ3JBVzZpRnBlRS9ZMDY2Q1ZHeld2VyIsIm5hbWUiOiJIYXJzaCIsImNyZWF0ZWRBdCI6IjIwMjMtMDktMjZUMTI6MDI6MDUuNzc2WiIsInVwZGF0ZWRBdCI6IjIwMjMtMDktMjZUMTI6MDI6MDUuNzc2WiJ9LCJpYXQiOjE2OTU3Mjk3MzEsImV4cCI6MTY5NTc1ODUzMX0.HpZDqHG3TbEKaaTFmXOrtJkyBUXSjdLAtNMLTOL_p3o",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/tasks",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"tasks"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create tasks",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySW5mbyI6eyJlbWFpbCI6ImhhcnNoQGdtYWlsLmNvbSIsImlkIjoxLCJwYXNzd29yZCI6IiQyYiQxMCROMFdFczJtTmFoY1Q3UVVEUUZndDBlR2FYZGd6eHlLZ3JBVzZpRnBlRS9ZMDY2Q1ZHeld2VyIsIm5hbWUiOiJIYXJzaCIsImNyZWF0ZWRBdCI6IjIwMjMtMDktMjZUMTI6MDI6MDUuNzc2WiIsInVwZGF0ZWRBdCI6IjIwMjMtMDktMjZUMTI6MDI6MDUuNzc2WiJ9LCJpYXQiOjE2OTU3Mjk3MzEsImV4cCI6MTY5NTc1ODUzMX0.HpZDqHG3TbEKaaTFmXOrtJkyBUXSjdLAtNMLTOL_p3o",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"GET MILK!!\",\n    \"status\": \"open\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/tasks",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"tasks"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get tasks metrics",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySW5mbyI6eyJlbWFpbCI6ImhhcnNoQGdtYWlsLmNvbSIsImlkIjoxLCJwYXNzd29yZCI6IiQyYiQxMCROMFdFczJtTmFoY1Q3UVVEUUZndDBlR2FYZGd6eHlLZ3JBVzZpRnBlRS9ZMDY2Q1ZHeld2VyIsIm5hbWUiOiJIYXJzaCIsImNyZWF0ZWRBdCI6IjIwMjMtMDktMjZUMTI6MDI6MDUuNzc2WiIsInVwZGF0ZWRBdCI6IjIwMjMtMDktMjZUMTI6MDI6MDUuNzc2WiJ9LCJpYXQiOjE2OTU3Mjk3MzEsImV4cCI6MTY5NTc1ODUzMX0.HpZDqHG3TbEKaaTFmXOrtJkyBUXSjdLAtNMLTOL_p3o",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/tasks/metrics",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"tasks",
+								"metrics"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete task",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySW5mbyI6eyJlbWFpbCI6ImhhcnNoQGdtYWlsLmNvbSIsImlkIjoxLCJwYXNzd29yZCI6IiQyYiQxMCROMFdFczJtTmFoY1Q3UVVEUUZndDBlR2FYZGd6eHlLZ3JBVzZpRnBlRS9ZMDY2Q1ZHeld2VyIsIm5hbWUiOiJIYXJzaCIsImNyZWF0ZWRBdCI6IjIwMjMtMDktMjZUMTI6MDI6MDUuNzc2WiIsInVwZGF0ZWRBdCI6IjIwMjMtMDktMjZUMTI6MDI6MDUuNzc2WiJ9LCJpYXQiOjE2OTU3Mjk3MzEsImV4cCI6MTY5NTc1ODUzMX0.HpZDqHG3TbEKaaTFmXOrtJkyBUXSjdLAtNMLTOL_p3o",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/tasks/1",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"tasks",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
