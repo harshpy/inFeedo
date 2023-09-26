@@ -25,7 +25,7 @@ all other necessary packages like express.js and required ORM will be installed 
 6. "npm run db:migrate" // this will the migration files and create tables. to rollback, please run (npm run db:rollback)
 7. npm start
 
-##paginations can be achieved by $limit and $offset params.
+#########pagination can be achieved by $limit and $offset##########
 ex:- localhost:3000/tasks?$limit=2&$offset=3
 
 ### language used, framework used
